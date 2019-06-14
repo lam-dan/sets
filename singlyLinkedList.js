@@ -74,6 +74,9 @@ class LinkedList {
 
   //inserts node with a value in the given index
   insert(index, value) {
+    if( index < 0){
+      return false;
+    }
     if (index > this.length) {
       return false;
     }
@@ -106,6 +109,9 @@ class LinkedList {
 
   //removes index with the given value
   remove(index) {
+    if(index < 0){
+      return false;
+    }
     if (index === 0) {
       let currentNode = this.head;
       this.head = currentNode.next;
